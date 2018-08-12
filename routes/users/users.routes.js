@@ -83,11 +83,6 @@ router.post(
  *     produces:
  *       - application/json
  *     parameters:
- *       -  name: accessToken
- *          in: header
- *          description: append with bearer
- *          type: string
- *          required: true
  *       -  name: authorization
  *          in: header
  *          description: use this "Basic cHJlc2VudGFwcDpEQUY4N0RTRkRTRkRTQTk4RlNBREtKRTMyNEtKTDMySEZEN0ZEU0ZCMjQzNDNKNDlEU0Y="
