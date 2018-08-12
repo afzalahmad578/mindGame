@@ -81,11 +81,12 @@ app.use('/api/v1', index);
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
-app.listen(config.config()['port'], function () {
+let server = app.listen(config.config()['port'], function () {
     console.log("server listening on " + config.config()['port']);
+    
 })
 
-  
+console.log("server listening on " + JSON.stringify(server.address()));
 
 /**
  * comment sawgger
