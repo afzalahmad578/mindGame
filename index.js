@@ -8,22 +8,8 @@ const path = require('path');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const index = require('./routes/index.routes');
+const mongoConnection = require('./helper/mongoConnection');
 
-
-//Connecting to the Database
-mongoose.connect(config.config()['mongodb'], {
-    auth: config.config()['auth']
-}).catch((err) => {
-    console.log(err);
-    console.log('Could not connect to Database');
-});
-
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-    console.log('Successfully Connected');
-});
-mongoose.set('debug', true);
 
 // make dependencies of app is global
 require('./util/dependency');
@@ -99,7 +85,7 @@ app.listen(config.config()['port'], function () {
     console.log("server listening on " + config.config()['port']);
 })
 
-
+  
 
 /**
  * comment sawgger
