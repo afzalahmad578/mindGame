@@ -35,7 +35,7 @@ const {
  *     parameters:
  *       -  name: authorization
  *          in: header
- *          description: use this "Basic cHJlc2VudGFwcDpEQUY4N0RTRkRTRkRTQTk4RlNBREtKRTMyNEtKTDMySEZEN0ZEU0ZCMjQzNDNKNDlEU0Y="
+ *          description: use this "Basic YWRtaW46REFGODdEU0ZEU0ZEU0E5OEZTQURLSkUzMjRLSkwzMkhGRDdGRFNGQjI0MzQzSjQ5RFNG"
  *          type: string
  *          required: true
  *       - name: firstName
@@ -85,7 +85,7 @@ router.post(
  *     parameters:
  *       -  name: authorization
  *          in: header
- *          description: use this "Basic cHJlc2VudGFwcDpEQUY4N0RTRkRTRkRTQTk4RlNBREtKRTMyNEtKTDMySEZEN0ZEU0ZCMjQzNDNKNDlEU0Y="
+ *          description: use this "Basic YWRtaW46REFGODdEU0ZEU0ZEU0E5OEZTQURLSkUzMjRLSkwzMkhGRDdGRFNGQjI0MzQzSjQ5RFNG"
  *          type: string
  *          required: true
  *       - name: email
@@ -130,7 +130,7 @@ router.post(
  *          required: true
  *       -  name: authorization
  *          in: header
- *          description: use this "Basic cHJlc2VudGFwcDpEQUY4N0RTRkRTRkRTQTk4RlNBREtKRTMyNEtKTDMySEZEN0ZEU0ZCMjQzNDNKNDlEU0Y="
+ *          description: use this "Basic YWRtaW46REFGODdEU0ZEU0ZEU0E5OEZTQURLSkUzMjRLSkwzMkhGRDdGRFNGQjI0MzQzSjQ5RFNG"
  *          type: string
  *          required: true
  *       - name: email
@@ -167,7 +167,7 @@ router.post(
  *          required: true
  *       -  name: authorization
  *          in: header
- *          description: use this "Basic cHJlc2VudGFwcDpEQUY4N0RTRkRTRkRTQTk4RlNBREtKRTMyNEtKTDMySEZEN0ZEU0ZCMjQzNDNKNDlEU0Y="
+ *          description: use this "Basic YWRtaW46REFGODdEU0ZEU0ZEU0E5OEZTQURLSkUzMjRLSkwzMkhGRDdGRFNGQjI0MzQzSjQ5RFNG"
  *          type: string
  *          required: true
  *       - name: id
