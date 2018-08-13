@@ -3,10 +3,10 @@ const router = express.Router();
 
 
 /*  Sub Route*/
-const student = require('./users/users.routes');
+const user = require('./users/users.routes');
 const admin = require('./admin/admin.routes');
 
-router.use('/user', student);
+router.use('/user', user);
 
 router.use('/admin',admin);
 

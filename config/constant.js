@@ -3,6 +3,13 @@ module.exports.DEVICE_TYPES = {
     ANDROID: 'ANDROID'
 }
 
+module.exports.STATUS = {
+    ACTIVE: 'ACTIVE',
+    BLOCKED: 'BLOCKED',
+    DELETED: 'DELETED',
+    DEACTIVATE:'DEACTIVATED'
+}
+
 module.exports.SERVER = {
     SUPPORT_EMAIL: 'afzalahmad578@gmail.com',
     FCM_SERVER_KEY: '',

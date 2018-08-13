@@ -20,7 +20,7 @@ exports.signup = async (req, res) => {
 
         let userData = await DBManager.findOne("Users", { email: email.trim() }, {}, { lean: true });
 
-        if (!studentData) {
+        if (!userData) {
 
             let insertData = {
                 "name": firstName.trim() + ' ' + lastName.trim(),
@@ -37,9 +37,9 @@ exports.signup = async (req, res) => {
 
             console.log(insertData);
 
-            let studentInsertedData = await DBManager.saveData("Users", insertData);
+            let userInsertedData = await DBManager.saveData("Users", insertData);
 
-            response(res, true, SuccessCode.SUCCESS, {}, SuccessMessage.SUCCESS);
+            response(res, true, SuccessCode.SUCCESS, userInsertedData, SuccessMessage.SUCCESS);
 
         } else {
             response(res, false, ErrorCode.ALREADY_EXIST, {}, ErrorMessage.EMAIL_EXIST, '');
@@ -84,7 +84,8 @@ exports.login = async (req, res) => {
                 let userDataUpdated = await DBManager.findAndUpdate("Users", criteria, update, { new: true })
                 response(res, true, SuccessCode.SUCCESS, userDataUpdated, SuccessMessage.LOGIN_SUCCESS);
             } else {
-                response(res, true, ErrorCode.INVALID, [], ErrorMessage.WRONG_PASSWORD);
+                console.log('gg');
+                response(res, true, ErrorCode.INVALID_CREDENTIAL, {}, ErrorMessage.WRONG_PASSWORD);
             }
         } else {
             response(res, false, ErrorCode.INVALID, [], ErrorMessage.EMAIL_NOT_REGISTERED);

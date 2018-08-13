@@ -12,7 +12,7 @@ module.exports.ErrorCode = Object.freeze({
     'FORBIDDEN':403,
     'NOT_FOUND':404,
     'VALIDATION_FAILED':422,
-    'ALREADY_EXIST':409 
+    'ALREADY_EXIST':409
 });
 
 /** 
