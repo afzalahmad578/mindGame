@@ -127,13 +127,15 @@ exports.forgetPassword = async (req, res) => {
         if (step1 && step1.length > 0) {
             let userData = await DBManager.findOne("Users", { email: req.body.email }, {}, { lean: true })
             let mailContent = await (Template.TemplateUtil(process.cwd() + '/views/resetPassword.ejs', { password: userData['password'], firstName: userData['firstName'], lastName: userData['lastName'] }))
-            let mailinfo = {
-                senderMail: constant.SERVER.SUPPORT_EMAIL,
-                receiverMail: req.body.email,
+            var mailOptions = {
+                from: constant.SERVER.SUPPORT_EMAIL,
+                to: req.body.email,
                 subject: constant.SERVER.EMAIL_SUB,
-                content: mailContent
-            }
-            sendMail(mailinfo);
+                text: 'Reset Password.',
+                html: mailContent
+              }
+        
+            sendMail(mailOptions);
         } else {
             response(res, false, ErrorCode.INVALID, [], ErrorMessage.EMAIL_NOT_REGISTERED);
         }
