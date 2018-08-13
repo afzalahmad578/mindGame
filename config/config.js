@@ -36,16 +36,16 @@ module.exports.config = () => {
             conf.otpExpireTime = '30000'
             break;
         default:
-        // conf.mongodb = "mongodb://ds139949.mlab.com:39949/mindgame_db";
-        // conf.auth = {
-        //     user: 'afzal',
-        //     password: 'mindgame@123'
-        // };
-            conf.mongodb = "mongodb://localhost:27017/mindgame";
-            conf.auth = {
-                user: 'afzal',
-                password: 'mindgame@123'
-            }
+        conf.mongodb = "mongodb://ds139949.mlab.com:39949/mindgame_db";
+        conf.auth = {
+            user: 'afzal',
+            password: 'mindgame@123'
+        };
+            // conf.mongodb = "mongodb://localhost:27017/mindgame";
+            // conf.auth = {
+            //     user: 'afzal',
+            //     password: 'mindgame@123'
+            // }
             conf.port = 7165;
             //conf.host = '18.191.99.147:7165';
             conf.baseUrl = 'http://localhost:7165/';
